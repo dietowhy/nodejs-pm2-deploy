@@ -24,7 +24,7 @@ module.exports = {
       repo: DEPLOY_REPO,
       path: DEPLOY_PATH,
       "pre-deploy-local":
-        "scp -i ${DEPLOY_SSH_KEY} ./.env ./.env.deploy ${DEPLOY_USER}@${DEPLOY_HOST}:${DEPLOY_PATH}/backend/",
+        "bash scripts/deployEnv.sh ${DEPLOY_USER}@${DEPLOY_HOST} ${DEPLOY_PATH}",
 
       "post-deploy": [
         "cd backend",
