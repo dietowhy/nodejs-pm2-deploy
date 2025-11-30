@@ -9,10 +9,6 @@ module.exports = {
       name: "api",
       script: "./dist/app.js",
       env: { NODE_ENV: "production" },
-      instances: 1,
-      watch: false,
-      autorestart: true,
-      max_memory_restart: "300M",
     },
   ],
 
@@ -26,7 +22,7 @@ module.exports = {
       path: DEPLOY_PATH,
       ssh_options: 'StrictHostKeyChecking=no',
       "pre-deploy-local":
-        `scp -i ${DEPLOY_SSH_KEY} .env ${DEPLOY_USER}@${DEPLOY_HOST}:${DEPLOY_PATH}/current/backend/`,
+        `scp -i ${DEPLOY_SSH_KEY} .env ${DEPLOY_USER}@${DEPLOY_HOST}:${DEPLOY_PATH}/source/backend/`,
 
       "post-deploy": [
         "cd backend",
