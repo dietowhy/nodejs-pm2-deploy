@@ -1,9 +1,24 @@
 require("dotenv").config({ path: "../.env.deploy" });
 
-const { DEPLOY_USER, DEPLOY_HOST, DEPLOY_PATH, DEPLOY_REPO, DEPLOY_REF, DEPLOY_SSH_KEY } =
-  process.env;
+const {
+  DEPLOY_USER,
+  DEPLOY_HOST,
+  DEPLOY_PATH,
+  DEPLOY_REPO,
+  DEPLOY_REF,
+  DEPLOY_SSH_KEY,
+} = process.env;
 
 module.exports = {
+  apps: [
+    {
+      name: "frontend",
+      env_production: {
+        NODE_ENV,
+      },
+    },
+  ],
+
   deploy: {
     production: {
       user: DEPLOY_USER,
