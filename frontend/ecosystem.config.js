@@ -13,9 +13,7 @@ module.exports = {
   apps: [
     {
       name: "frontend",
-      env_production: {
-        NODE_ENV,
-      },
+      env: { NODE_ENV: "production" },
     },
   ],
 
