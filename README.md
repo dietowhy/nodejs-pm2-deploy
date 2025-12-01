@@ -1,3 +1,5 @@
 # Деплой приложения на сервер с использованием pm2
 
-Стартеркит проекта по автоматизации деплоя фронтенда и бэкенда при помощи pm2 (pm2 deploy)
+ip: 158.160.144.230
+frontend: dietowhy.nomorepartiessbs.ru
+backend: api.dietowhy.nomorepartiessbs.ru
