@@ -10,13 +10,7 @@ const {
 } = process.env;
 
 module.exports = {
-  apps: [
-    {
-      name: "frontend",
-      env: { NODE_ENV: "production" },
-      script: "./dist/app.js"
-    },
-  ],
+  apps: [],
 
   deploy: {
     production: {
