@@ -14,7 +14,7 @@ module.exports = {
     {
       name: "frontend",
       env: { NODE_ENV: "production" },
-      script: "./build/app.js"
+      script: "./dist/app.js"
     },
   ],
 
